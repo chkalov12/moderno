@@ -1,0 +1,25 @@
+html{
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: green;
+    .header{
+        min-height: 40px;
+        background-color: red;
+        padding: 10px;
+        .container{
+            background-color: #fff;
+            min-height: 10px;
+        }
+    }
+}
+.box{
+    display: flex;
+    transition: all .3s;
+}
