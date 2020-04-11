@@ -22,11 +22,23 @@ $(function(){
       to: 60,
       prefix: "$"
   });
+
+  $('.icon-th-list').on('click', function(){
+    $('.product__item').addClass('list');
+    $('.icon-th-list').addClass('active');
+    $('.icon-th-large').removeClass('active');
+  });
+
+  $('.icon-th-large').on('click', function(){
+    $('.product__item').removeClass('list');
+    $('.icon-th-list').removeClass('active');
+    $('.icon-th-large').addClass('active');
+  });
        
 
 
 
-    let mixer = mixitup('.products__inner-box');
+    var mixer = mixitup('.products__inner-box');
 
 
 
