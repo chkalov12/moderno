@@ -30,6 +30,7 @@ body {
     line-height: 24px;
     color: $text;
     font-weight: 400;
+    overflow-x: hidden;
 }
 .container {
     max-width: 1200px;
@@ -49,8 +50,8 @@ body {
     }
 }
 
-.page-content{
-    background-color: $grey ;
+.page-content {
+    background-color: $grey;
 }
 
 .title {
@@ -97,9 +98,9 @@ body {
                     position: absolute;
                 }
             }
-            &:last-child{
+            &:last-child {
                 a,
-                span{
+                span {
                     color: $bg;
                 }
             }
@@ -109,5 +110,15 @@ body {
         }
     }
 }
-
-
+.angle-right {
+    position: relative;
+    padding-left: 15px;
+    &::before {
+        content: "\f105";
+        color: $green;
+        font-size: 14px;
+        position: absolute;
+        left: 0;
+        font-family: "icomoon";
+    }
+}
