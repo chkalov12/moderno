@@ -13,6 +13,7 @@
     "save-dev": "0.0.1-security"
   },
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "browser-sync": "^2.26.7",
     "cssmin": "^0.4.3",
     "gulp": "^4.0.2",
