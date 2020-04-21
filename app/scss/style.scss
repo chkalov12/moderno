@@ -1629,6 +1629,45 @@ button.icon-unsorted {
         @include f500;
     }
 }
+
+.aside__item.product__price {
+    .jq-selectbox__select {
+        height: auto;
+        font-size: 13px;
+        line-height: 19px;
+        padding: 4px 10px;
+        padding-right: 30px;
+        border: 1px solid #dedede;
+        border-bottom-color: none;
+        border-radius: 0px;
+        background: none;
+        box-shadow: none;
+        font-family: "Roboto-Regular", sans-serif;
+        color: #333;
+        text-shadow: none;
+    }
+    .jq-selectbox__trigger {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: 100%;
+        border-left: none;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: "\f0d7";
+            font-family: "icomoon";
+            color: $green;
+            bottom: 0;
+            right: -20px;
+        }
+    }
+
+    .jq-selectbox__trigger-arrow {
+        display: none;
+    }
+}
 //end product-one
 
 //start 404
@@ -1905,6 +1944,47 @@ button.icon-unsorted {
         border: 1px solid #dedede;
         background-color: #f9f9f9;
         padding: 0 10px;
+        outline: none;
+    }
+
+    .jq-selectbox {
+        z-index: 0;
+        cursor: pointer;
+        max-width: 540px;
+        width: 100%;
+        height: 40px;
+        color: #707070;
+        border: 1px solid #dedede;
+        background-color: #f9f9f9;
+        padding: 0 10px;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0;
+        border: none;
+        border-bottom-color: transparent;
+        border-radius: 4px;
+        background: transparent;
+        box-shadow: none;
+        font-family: "Roboto-Regular", sans-serif;
+        color: #707070;
+        text-shadow: none;
+    }
+    .jq-file__browse,
+    .jq-selectbox__dropdown {
+        right: 0;
+        outline: transparent;
+    }
+    .jq-selectbox__trigger-arrow {
+        right: 3px;
+    }
+    .jq-selectbox__trigger {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 34px;
+        height: 100%;
+        border-left: none;
     }
 }
 //end settings
@@ -2157,7 +2237,7 @@ button.icon-unsorted {
         height: 150px;
         padding: 8px 18px;
     }
-    input[type="file"]{
+    input[type="file"] {
         outline: none;
     }
 
@@ -2203,7 +2283,7 @@ button.icon-unsorted {
         box-sizing: border-box;
         width: 100%;
         height: 40px;
-        padding: 0 18px ;
+        padding: 0 18px;
         border: none;
         border-bottom-color: transparent;
         border-radius: 0px;
