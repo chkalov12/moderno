@@ -1948,7 +1948,6 @@ button.icon-unsorted {
     }
 
     .jq-selectbox {
-        z-index: 0;
         cursor: pointer;
         max-width: 540px;
         width: 100%;
@@ -1956,14 +1955,15 @@ button.icon-unsorted {
         color: #707070;
         border: 1px solid #dedede;
         background-color: #f9f9f9;
-        padding: 0 10px;
+        padding: 0px;
+        outline: none;
     }
     .jq-selectbox__select {
         height: 40px;
-        padding: 0;
+        padding: 3px 10px;
         border: none;
         border-bottom-color: transparent;
-        border-radius: 4px;
+        border-radius: 0px;
         background: transparent;
         box-shadow: none;
         font-family: "Roboto-Regular", sans-serif;
@@ -1976,7 +1976,7 @@ button.icon-unsorted {
         outline: transparent;
     }
     .jq-selectbox__trigger-arrow {
-        right: 3px;
+        right: 17px;
     }
     .jq-selectbox__trigger {
         position: absolute;
@@ -2219,9 +2219,6 @@ button.icon-unsorted {
         color: $green;
         font-size: 20px;
     }
-    &::placeholder {
-        color: #707070;
-    }
     select,
     input,
     textarea {
@@ -2231,6 +2228,9 @@ button.icon-unsorted {
         height: 40px;
         background-color: #f9f9f9;
         padding: 0 18px;
+        &::placeholder {
+            color: #707070;
+        }
     }
     textarea {
         resize: none;
@@ -2311,5 +2311,145 @@ button.icon-unsorted {
 }
 
 //end upload
+
+//start withdrawals
+
+.withdrawals__inner{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+
+}
+.withdrawals__col{
+    border: 1px solid #d7d7d7;
+    max-width: 570px;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+.withdrawals__title{
+    margin-bottom: 30px;
+    color: $bg;
+    @include f500;
+    font-size: 24px;
+    border-bottom: 1px solid #dedede;
+    padding: 18px 32px 24px;
+}
+.withdrawals__content{
+    padding-left: 35px;
+    padding-right: 40px;
+    button{
+        margin-bottom: 50px;
+        color: #fff;
+        background-color: $green;
+        padding: 15px 36px;
+        cursor: pointer;
+        border: none;
+
+    }
+}
+.withdrawals__form-line{
+    margin-bottom: 25px;
+    label{
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        @include f500;
+        color: $bg;
+        margin-bottom: 15px;
+        span{
+            color: $green;
+        }
+    }
+    input,
+    select{
+        width: 100%;
+        display: block;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0 18px;
+        &::placeholder {
+            color: #707070;
+        }
+    }
+    .jq-selectbox {
+        width: 100%;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: "Roboto-Regular", sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 40px;
+    }
+    .jq-selectbox__trigger-arrow {
+        border: none;
+        line-height: 40px;
+        font-size: 15px;
+        right: 20px;
+        top: 0;
+        &::before {
+            font-family: "icomoon";
+            content: "\f0d7";
+        }
+    }
+    .jq-selectbox__trigger {
+        border-left: none;
+    }
+}
+.withdrawals__content-items{
+    padding-bottom: 35px;
+}
+.withdrawals__content-item{
+    display: flex;
+    height: 42px;
+    align-items: center;
+    font-size: 13px;
+    @include f500;
+    color: #444;
+    &:nth-child(odd){
+        background-color: #f9f9f9;
+    }
+}
+.withdrawals__content-date{
+    width: 154px;
+    padding-left: 20px;
+}
+.withdrawals__content-email{
+    width: 180px;
+}
+.withdrawals__content-price{
+    width: 70px;
+    @include f700;
+}
+.withdrawals__content-status{
+    width: 88px;
+    @include f700;
+    &.withdrawals__content-paid{
+        color: $green;
+    }
+
+}
+
+//end withdrawals
+
+
+
+
+
+
+
+
+
+
+
+
 
 @import "media";
