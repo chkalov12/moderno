@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
 }
+
 *,
 *::before,
 *::after {
@@ -10,6 +11,8 @@ html {
 html,
 body {
     height: 100%;
+    position: relative;
+    overflow-x: hidden;
 }
 
 a {
@@ -17,6 +20,7 @@ a {
     text-decoration: none;
     color: $text;
 }
+
 ul,
 li {
     margin: 0;
@@ -32,6 +36,7 @@ body {
     font-weight: 400;
     overflow-x: hidden;
 }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -73,9 +78,11 @@ body {
     flex-direction: column;
     min-height: 100%;
 }
+
 .content {
     flex: 1 0 auto;
 }
+
 .footer {
     flex: 0 0 auto;
 }
@@ -90,8 +97,7 @@ body {
         li {
             display: inline-block;
             position: relative;
-
-            & + li {
+            &+li {
                 padding-left: 24px;
                 &::before {
                     content: "-";
@@ -112,6 +118,7 @@ body {
         }
     }
 }
+
 .angle-right {
     position: relative;
     padding-left: 15px;
